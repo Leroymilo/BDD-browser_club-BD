@@ -44,10 +44,10 @@
             <property name="hidden">0</property>
             <property name="id">wxID_ANY</property>
             <property name="maximum_size">-1,-1</property>
-            <property name="minimum_size">-1,250</property>
+            <property name="minimum_size">860,240</property>
             <property name="name">Window</property>
             <property name="pos"></property>
-            <property name="size">800,250</property>
+            <property name="size">860,240</property>
             <property name="style">wxDEFAULT_FRAME_STYLE</property>
             <property name="subclass"></property>
             <property name="title">Adding series to database</property>
@@ -271,7 +271,7 @@
                         <object class="sizeritem" expanded="1">
                             <property name="border">5</property>
                             <property name="flag">wxALL|wxALIGN_CENTER_VERTICAL</property>
-                            <property name="proportion">1</property>
+                            <property name="proportion">0</property>
                             <object class="wxTextCtrl" expanded="1">
                                 <property name="BottomDockable">1</property>
                                 <property name="LeftDockable">1</property>
@@ -302,11 +302,11 @@
                                 <property name="id">wxID_ANY</property>
                                 <property name="max_size"></property>
                                 <property name="maximize_button">0</property>
-                                <property name="maximum_size"></property>
+                                <property name="maximum_size">100,-1</property>
                                 <property name="maxlength"></property>
                                 <property name="min_size"></property>
                                 <property name="minimize_button">0</property>
-                                <property name="minimum_size"></property>
+                                <property name="minimum_size">100,-1</property>
                                 <property name="moveable">1</property>
                                 <property name="name">id_box</property>
                                 <property name="pane_border">1</property>
@@ -439,10 +439,10 @@
                                 <property name="id">wxID_ANY</property>
                                 <property name="max_size"></property>
                                 <property name="maximize_button">0</property>
-                                <property name="maximum_size"></property>
+                                <property name="maximum_size">100,-1</property>
                                 <property name="min_size"></property>
                                 <property name="minimize_button">0</property>
-                                <property name="minimum_size"></property>
+                                <property name="minimum_size">100,-1</property>
                                 <property name="moveable">1</property>
                                 <property name="name">cat_choice</property>
                                 <property name="pane_border">1</property>
@@ -700,10 +700,10 @@
                                 <property name="id">wxID_ANY</property>
                                 <property name="max_size"></property>
                                 <property name="maximize_button">0</property>
-                                <property name="maximum_size"></property>
+                                <property name="maximum_size">120,-1</property>
                                 <property name="min_size"></property>
                                 <property name="minimize_button">0</property>
-                                <property name="minimum_size"></property>
+                                <property name="minimum_size">-1,-1</property>
                                 <property name="moveable">1</property>
                                 <property name="name">first_auth_choice</property>
                                 <property name="pane_border">1</property>
@@ -809,7 +809,7 @@
                 <object class="sizeritem" expanded="1">
                     <property name="border">5</property>
                     <property name="flag">wxEXPAND|wxALL</property>
-                    <property name="proportion">0</property>
+                    <property name="proportion">1</property>
                     <object class="wxStaticText" expanded="1">
                         <property name="BottomDockable">1</property>
                         <property name="LeftDockable">1</property>

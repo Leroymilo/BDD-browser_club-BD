@@ -44,13 +44,13 @@
             <property name="hidden">0</property>
             <property name="id">wxID_ANY</property>
             <property name="maximum_size">-1,-1</property>
-            <property name="minimum_size">-1,120</property>
+            <property name="minimum_size">320,130</property>
             <property name="name">Window</property>
             <property name="pos"></property>
-            <property name="size">300,120</property>
+            <property name="size">320,130</property>
             <property name="style">wxDEFAULT_FRAME_STYLE</property>
             <property name="subclass"></property>
-            <property name="title">Adding an editor to the database</property>
+            <property name="title">Adding editor to database</property>
             <property name="tooltip"></property>
             <property name="two_step_creation">0</property>
             <property name="window_extra_style"></property>
@@ -103,7 +103,7 @@
                                 <property name="gripper">0</property>
                                 <property name="hidden">0</property>
                                 <property name="id">wxID_ANY</property>
-                                <property name="label">Enter name :</property>
+                                <property name="label">Editor name :</property>
                                 <property name="markup">0</property>
                                 <property name="max_size"></property>
                                 <property name="maximize_button">0</property>
@@ -201,7 +201,7 @@
                 <object class="sizeritem" expanded="1">
                     <property name="border">5</property>
                     <property name="flag">wxALL|wxEXPAND</property>
-                    <property name="proportion">0</property>
+                    <property name="proportion">1</property>
                     <object class="wxStaticText" expanded="1">
                         <property name="BottomDockable">1</property>
                         <property name="LeftDockable">1</property>

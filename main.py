@@ -13,6 +13,9 @@ from UIs.users import User_UI
 from UIs.loan import Loan_UI
 
 from UIs.series import Series_modif
+from UIs.authors import Author_modif
+from UIs.editors import Editor_modif
+from UIs.books import Book_modif
 
 attributes = {"Users":["ID", "First name", "Last name", "tel", "e-mail", "Loans", "Late loans"],
 "Books":["ID", "Series", "Volume", "Volume name", "Copy", "Category", "Type", "Editor", "Buy date", "Disponibility", "Old ID"],
@@ -36,7 +39,7 @@ getters = {"Users":get_users, "Books":get_books, "Loans":get_loans,
 adders = {"Users":User_UI, "Books":Book_UI, "Loans":Loan_UI,
 "Series":Series_UI, "Authors":Author_UI, "Editors":Editor_UI}
 
-modifiers = {"Series":Series_modif}
+modifiers = {"Books":Book_modif, "Series":Series_modif, "Authors":Author_modif, "Editors":Editor_modif}
 
 removers = {"Users":remove_users, "Books":remove_book, "Series":remove_series,
 "Authors":remove_author, "Editors":remove_editor}

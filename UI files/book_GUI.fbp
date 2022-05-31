@@ -43,11 +43,11 @@
             <property name="font"></property>
             <property name="hidden">0</property>
             <property name="id">wxID_ANY</property>
-            <property name="maximum_size">-1,200</property>
-            <property name="minimum_size">-1,200</property>
+            <property name="maximum_size">-1,-1</property>
+            <property name="minimum_size">500,200</property>
             <property name="name">Window</property>
             <property name="pos"></property>
-            <property name="size">-1,200</property>
+            <property name="size">500,200</property>
             <property name="style">wxDEFAULT_FRAME_STYLE</property>
             <property name="subclass"></property>
             <property name="title">Adding book to database</property>
@@ -167,7 +167,7 @@
                                 <property name="id">wxID_ANY</property>
                                 <property name="max_size"></property>
                                 <property name="maximize_button">0</property>
-                                <property name="maximum_size"></property>
+                                <property name="maximum_size">240,-1</property>
                                 <property name="min_size"></property>
                                 <property name="minimize_button">0</property>
                                 <property name="minimum_size"></property>
@@ -344,7 +344,7 @@
                         </object>
                         <object class="sizeritem" expanded="1">
                             <property name="border">5</property>
-                            <property name="flag">wxALIGN_CENTER_VERTICAL|wxALL</property>
+                            <property name="flag">wxALL|wxALIGN_CENTER_VERTICAL</property>
                             <property name="proportion">0</property>
                             <object class="wxTextCtrl" expanded="1">
                                 <property name="BottomDockable">1</property>
@@ -376,7 +376,7 @@
                                 <property name="id">wxID_ANY</property>
                                 <property name="max_size"></property>
                                 <property name="maximize_button">0</property>
-                                <property name="maximum_size"></property>
+                                <property name="maximum_size">80,-1</property>
                                 <property name="maxlength"></property>
                                 <property name="min_size"></property>
                                 <property name="minimize_button">0</property>
@@ -638,7 +638,7 @@
                                 <property name="id">wxID_ANY</property>
                                 <property name="max_size"></property>
                                 <property name="maximize_button">0</property>
-                                <property name="maximum_size"></property>
+                                <property name="maximum_size">160,-1</property>
                                 <property name="min_size"></property>
                                 <property name="minimize_button">0</property>
                                 <property name="minimum_size"></property>

@@ -18,9 +18,9 @@ import wx.adv
 class Window ( wx.Frame ):
 
 	def __init__( self, parent ):
-		wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = u"Adding book to database", pos = wx.DefaultPosition, size = wx.Size( -1,200 ), style = wx.DEFAULT_FRAME_STYLE|wx.TAB_TRAVERSAL )
+		wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = u"Adding book to database", pos = wx.DefaultPosition, size = wx.Size( 500,200 ), style = wx.DEFAULT_FRAME_STYLE|wx.TAB_TRAVERSAL )
 
-		self.SetSizeHints( wx.Size( -1,200 ), wx.Size( -1,200 ) )
+		self.SetSizeHints( wx.Size( 500,200 ), wx.Size( -1,-1 ) )
 
 		vertical_align = wx.BoxSizer( wx.VERTICAL )
 
@@ -34,6 +34,8 @@ class Window ( wx.Frame ):
 		series_choiceChoices = []
 		self.series_choice = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, series_choiceChoices, wx.CB_SORT )
 		self.series_choice.SetSelection( 0 )
+		self.series_choice.SetMaxSize( wx.Size( 240,-1 ) )
+
 		h_align_1.Add( self.series_choice, 1, wx.ALL|wx.ALIGN_CENTER_VERTICAL, 5 )
 
 		self.series_button = wx.Button( self, wx.ID_ANY, u"Add Series", wx.DefaultPosition, wx.DefaultSize, 0 )
@@ -50,7 +52,9 @@ class Window ( wx.Frame ):
 		h_align_2.Add( self.vol_text, 0, wx.ALL|wx.ALIGN_CENTER_VERTICAL, 5 )
 
 		self.vol_box = wx.TextCtrl( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
-		h_align_2.Add( self.vol_box, 0, wx.ALIGN_CENTER_VERTICAL|wx.ALL, 5 )
+		self.vol_box.SetMaxSize( wx.Size( 80,-1 ) )
+
+		h_align_2.Add( self.vol_box, 0, wx.ALL|wx.ALIGN_CENTER_VERTICAL, 5 )
 
 		self.vol_name_text = wx.StaticText( self, wx.ID_ANY, u"Volume name :", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.vol_name_text.Wrap( -1 )
@@ -73,6 +77,8 @@ class Window ( wx.Frame ):
 		edit_choiceChoices = []
 		self.edit_choice = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, edit_choiceChoices, wx.CB_SORT )
 		self.edit_choice.SetSelection( 0 )
+		self.edit_choice.SetMaxSize( wx.Size( 160,-1 ) )
+
 		h_align_3.Add( self.edit_choice, 0, wx.ALL|wx.ALIGN_CENTER_VERTICAL, 5 )
 
 		self.add_edit_button = wx.Button( self, wx.ID_ANY, u"Add Editor", wx.DefaultPosition, wx.DefaultSize, 0 )

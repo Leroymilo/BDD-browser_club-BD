@@ -18,9 +18,9 @@ import wx.adv
 class Window ( wx.Frame ):
 
 	def __init__( self, parent ):
-		wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = u"Adding loan to database", pos = wx.DefaultPosition, size = wx.Size( 500,162 ), style = wx.DEFAULT_FRAME_STYLE|wx.TAB_TRAVERSAL )
+		wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = u"Adding loan to database", pos = wx.DefaultPosition, size = wx.Size( 500,170 ), style = wx.DEFAULT_FRAME_STYLE|wx.TAB_TRAVERSAL )
 
-		self.SetSizeHints( wx.Size( -1,162 ), wx.Size( -1,162 ) )
+		self.SetSizeHints( wx.Size( -1,170 ), wx.Size( -1,-1 ) )
 
 		vertical_align = wx.BoxSizer( wx.VERTICAL )
 
@@ -32,8 +32,10 @@ class Window ( wx.Frame ):
 		h_align_1.Add( self.user_text, 0, wx.ALL|wx.ALIGN_CENTER_VERTICAL, 5 )
 
 		user_choiceChoices = []
-		self.user_choice = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, user_choiceChoices, 0 )
+		self.user_choice = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 120,-1 ), user_choiceChoices, 0 )
 		self.user_choice.SetSelection( 0 )
+		self.user_choice.SetMaxSize( wx.Size( 160,-1 ) )
+
 		h_align_1.Add( self.user_choice, 0, wx.ALL|wx.ALIGN_CENTER_VERTICAL, 5 )
 
 		self.add_user_button = wx.Button( self, wx.ID_ANY, u"Add User", wx.DefaultPosition, wx.DefaultSize, 0 )
@@ -45,7 +47,7 @@ class Window ( wx.Frame ):
 		h_align_1.Add( self.book_text, 0, wx.ALL|wx.ALIGN_CENTER_VERTICAL, 5 )
 
 		book_choiceChoices = []
-		self.book_choice = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, book_choiceChoices, 0 )
+		self.book_choice = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( -1,-1 ), book_choiceChoices, 0 )
 		self.book_choice.SetSelection( 0 )
 		h_align_1.Add( self.book_choice, 0, wx.ALL|wx.ALIGN_CENTER_VERTICAL, 5 )
 
@@ -79,7 +81,7 @@ class Window ( wx.Frame ):
 		self.info_text = wx.StaticText( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.info_text.Wrap( -1 )
 
-		vertical_align.Add( self.info_text, 0, wx.ALL, 5 )
+		vertical_align.Add( self.info_text, 1, wx.ALL|wx.EXPAND, 5 )
 
 		self.add_button = wx.Button( self, wx.ID_ANY, u"Add Loan", wx.DefaultPosition, wx.DefaultSize, 0 )
 		vertical_align.Add( self.add_button, 0, wx.ALL|wx.ALIGN_RIGHT, 5 )

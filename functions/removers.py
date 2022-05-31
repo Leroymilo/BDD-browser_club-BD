@@ -33,13 +33,7 @@ def remove_series(id) :
 
 def remove_author(id) :
     id = str(id).rjust(3, '0')
-    cursor.execute(f"SELECT id, id_authors FROM SERIES WHERE id_authors LIKE '%{id}%';")
-    series = cursor.fetchall()
-    for (id_series, id_authors) in series :
-        id_authors = id_authors.split()
-        id_authors.remove(id)
-        id_authors = ' '.join(id_authors)
-        cursor.execute(f"UPDATE SERIES SET id_authors='{id_authors}' WHERE id='{id_series}';")
+    cursor.execute(f"DELETE FROM WROTE WHERE author_id={id};")
     cursor.execute(f"DELETE FROM AUTHORS WHERE id={id};")
     db.commit()
         

@@ -20,7 +20,7 @@ class Window ( wx.Frame ):
 	def __init__( self, parent ):
 		wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = u"DB Browser", pos = wx.DefaultPosition, size = wx.Size( 1000,500 ), style = wx.DEFAULT_FRAME_STYLE|wx.TAB_TRAVERSAL )
 		
-		self.SetSizeHintsSz( wx.Size( 1000,500 ), wx.DefaultSize )
+		self.SetSizeHints( wx.Size( 1000,500 ), wx.DefaultSize )
 		
 		vertical_align = wx.BoxSizer( wx.VERTICAL )
 		
