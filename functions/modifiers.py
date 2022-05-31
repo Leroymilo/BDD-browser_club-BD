@@ -67,3 +67,13 @@ def modif_editor(id:int, name:str) :
     cursor.execute(f"UPDATE EDITORS SET full_name='{name}' WHERE id='{id}'")
     db.commit()
     return True
+
+def modif_user(id:int, f_name:str, l_name:str, tel:str, mail:str, max_loan_nb:int) :
+    cursor.execute(f"""SELECT * FROM USERS WHERE f_name="{f_name}" AND l_name="{l_name}" AND id!={id};""")
+    if len(cursor.fetchall()) != 0 :
+        return False
+    cursor.execute(f"""UPDATE USERS
+    SET f_name="{f_name}", l_name="{l_name}", tel='{tel}', mail="{mail}", max_loan_nb={max_loan_nb}
+    WHERE id={id};""")
+    db.commit()
+    return True
