@@ -101,13 +101,13 @@ class Series_UI(Window) :
 class Series_modif(Series_UI) :
     def __init__(self, parent, item_id):
         super().__init__(parent)
-        self.id_box.SetLabel(item_id)
+        self.id_box.SetValue(item_id)
         self.add_button.SetLabel("Apply Edit")
         self.SetTitle("Modifying series in database")
 
         self.old_item = get_series(["ID", item_id])[0]
 
-        self.full_name_box.SetLabel(self.old_item[1])
+        self.full_name_box.SetValue(self.old_item[1])
 
         authors = self.old_item[2].split(", ")
         for auth_nb in range(len(authors)) :
