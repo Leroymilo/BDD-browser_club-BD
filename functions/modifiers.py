@@ -31,7 +31,7 @@ def modif_series(old_id:str, id:str, full_name:str, category:int, kind:str, auth
         for book in books :
             new_book_id = str(category).rjust(2, '0') + id + book[0][5:]
             #Updating loans :
-            cursor.execute(f"UPDATE LOANS SET book_id='{new_book_id}' WHERE id='{book[0]}'")
+            cursor.execute(f"UPDATE LOANS SET id_book='{new_book_id}' WHERE id_book='{book[0]}'")
             #Updating the book :
             if book[1] is None :
                 cursor.execute(f"UPDATE BOOKS SET old_id='{book[0]}' WHERE id='{book[0]}'")
